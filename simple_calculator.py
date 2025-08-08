@@ -4,13 +4,14 @@ def calc_main():
 
     while True:
 
-        operation = input('Please choose a operation mode: \n'
+        operation = input('Please choose an operation mode: \n'
                           'Add, subtract, multiply, divide, exit \n'
                           '=>').capitalize()
-        print(f'{total} {methods[operation]}')
         if operation == 'Exit':
             print('Exiting...')
             break
+        else:
+            print(f'{total} {methods[operation]}')
 
         user_input = input('=> ')
         if user_input.isdigit() and int(user_input) >= 0:
